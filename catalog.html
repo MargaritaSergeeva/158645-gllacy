@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Глейси: Каталог</title>
+	</head>
+	<body>
+		<header class="main-header">
+			<div class="container">
+				<div class="logo">
+					<img src="http://placehold.it/150x100" width="" height="" alt="Gllacy shop">
+				</div>
+				<nav class="main-navigation">
+					<ul class="main-menu">
+						<li class="catalog">
+							<a href="#">Каталог</a>
+								<ul class="secondary-menu pop-up">
+									<li><a href="#">Новинки</a></li>
+									<li><a href="#">Сливочное</a></li>
+									<li><a href="#">Щербеты</a></li>
+									<li><a href="#">Фруктовый лед</a></li>
+									<li><a href="#">Мелорин</a></li>
+								</ul>
+						</li>
+						<li>
+							<a href="#">Доставка и оплата</a>
+						</li>
+						<li>
+							<a href="#">О Компании</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="search pop-up">
+					<input name="search" type="search" placeholder="Что ищем?">
+				</div>
+				<div class="user-block">
+					<a class="login" href="#">Вход</a>
+					<form class="login-form pop-up">
+						<input name="email" type="email" placeholder="Электронная почта">
+						<input name="password" type="password" placeholder="Пароль">
+						<button class="btn" type="submit">Войти</button>
+						<a class="for-enter" href="#">Забыли пароль?</a>
+						<a class="for-enter" href="#">Новая регистрация</a>
+					</form>
+					<a class="cart" href="#">Пусто</a>
+					<div class="in-cart pop-up">
+						<ul>
+							<li>
+								<button class="btn-off">Закрыть</button>
+								<span class="item">Пломбир с апельсиновым джемом</span>
+								<span class="weight">1,5 кг
+									<span class="price">х 200 руб.</span>
+								</span>
+								<span>300 руб.</span>
+							</li>
+							<li>
+								<button class="btn-off">Закрыть</button>
+								<span class="item">Клубничный пломбир с присыпкой из белого шоколада</span>
+								<span class="weight">1,5 кг
+									<span class="price">х 300 руб.</span>
+								</span>
+								<span>450 руб.</span>
+							</li>
+						</ul>
+						<p>Итого: 750 руб.</p>
+						<a class="btn" href="#">Оформить заказ</a>
+					</div>
+				</div>
+				<div class="extra">
+					<p>с 10 до 20, ежедневно</p>
+					<p>8 812 450 25 25</p>
+				</div>
+			</div>
+		</header>
+		<main class="container">
+			<section class="breadcrumbs">
+				<a class="crumb" href="#">Главная</a>
+				<a class="crumb" href="#">Каталог</a>
+				<span class="crumb open">Сливочное</span>
+			</section>
+			<h1>Сливочное мороженое</h1>
+			<section class="filters">
+				<form class="filters-form" action="#" method="post" oninput="price-min.value=range-price.value">
+					<label for="sort">Сортировка</label>
+					<div class="filter-decor">
+						<select name="sort" id="sort">
+							<option value="popular" selected>по популярности</option>
+							<option value="low-price">сначала недорогие</option>
+							<option value="high-price">сначала дорогие</option>
+							<option value="fat">по жирности</option>
+						</select>
+					</div>
+					<label for="range-price">Цена:
+						<output name="price-min">100</output> руб.- 
+						<output name="price-max">500</output> руб.
+					</label>
+					<div class="filter-decor">
+						<input id="range-price" name="range-price" type="range" min="50" max="2000" step="10">
+					</div>
+					<label>Жирность</label>
+					<div class="filter-decor">
+						<input class="filter-fat" id="no-fat" type="radio">
+						<label for="no-fat">0%</label>
+						<input class="filter-fat" id="ten" type="radio" checked>
+						<label for="ten">до 10%</label>
+						<input class="filter-fat" id="thirty" type="radio">
+						<label for="thirty">до 30%</label>
+						<input class="filter-fat" id="thirty-more" type="radio">
+						<label for="thirty-more">выше 30%</label>
+					</div>
+					<label for="">Наполнители:</label>
+					<div class="filter-decor">
+						<input name="chocolate" type="checkbox">
+						<input type="sugar">
+						<input type="fruit">
+						<input type="syrup">
+						<input type="jams">
+					</div>
+				</form>
+			</section>
+		</main>
