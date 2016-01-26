@@ -6,36 +6,36 @@
 	</head>
 	<body>
 		<header class="main-header">
-			<div class="container">
-				<div class="logo">
-					<img src="http://placehold.it/150x100" width="" height="" alt="Gllacy shop">
-				</div>
-				<nav class="main-navigation">
-					<ul class="main-menu">
-						<li class="catalog">
-							<a href="#">Каталог</a>
-								<ul class="secondary-menu pop-up">
-									<li><a href="#">Новинки</a></li>
-									<li><a href="#">Сливочное</a></li>
-									<li><a href="#">Щербеты</a></li>
-									<li><a href="#">Фруктовый лед</a></li>
-									<li><a href="#">Мелорин</a></li>
-								</ul>
-						</li>
-						<li>
-							<a href="#">Доставка и оплата</a>
-						</li>
-						<li>
-							<a href="#">О Компании</a>
-						</li>
-					</ul>
-				</nav>
+			<div class="logo">
+				<img src="http://placehold.it/150x100" width="" height="" alt="Gllacy shop">
+			</div>
+			<nav class="main-navigation">
+				<ul class="main-menu">
+					<li>
+						<a class="catalog" href="#">Каталог</a>
+							<ul class="secondary-menu pop-up">
+								<li><a href="#">Новинки</a></li>
+								<li><a href="#">Сливочное</a></li>
+								<li><a href="#">Щербеты</a></li>
+								<li><a href="#">Фруктовый лед</a></li>
+								<li><a href="#">Мелорин</a></li>
+							</ul>
+					</li>
+					<li>
+						<a href="#">Доставка и оплата</a>
+					</li>
+					<li>
+						<a href="#">О Компании</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="wrapper">
 				<div class="search pop-up">
 					<input name="search" type="search" placeholder="Что ищем?">
 				</div>
 				<div class="user-block">
 					<a class="login" href="#">Вход</a>
-					<form class="login-form pop-up">
+					<form class="login-form pop-up" action="#" method="post">
 						<input name="email" type="email" placeholder="Электронная почта">
 						<input name="password" type="password" placeholder="Пароль">
 						<button class="btn" type="submit">Войти</button>
@@ -46,7 +46,7 @@
 					<div class="in-cart pop-up">
 						<ul>
 							<li>
-								<button class="btn-off">Закрыть</button>
+								<button class="btn-delete">Удалить</button>
 								<span class="item">Пломбир с апельсиновым джемом</span>
 								<span class="weight">1,5 кг
 									<span class="price">х 200 руб.</span>
@@ -54,7 +54,7 @@
 								<span>300 руб.</span>
 							</li>
 							<li>
-								<button class="btn-off">Закрыть</button>
+								<button class="btn-delete">Удалить</button>
 								<span class="item">Клубничный пломбир с присыпкой из белого шоколада</span>
 								<span class="weight">1,5 кг
 									<span class="price">х 300 руб.</span>
@@ -62,14 +62,14 @@
 								<span>450 руб.</span>
 							</li>
 						</ul>
-						<p>Итого: 750 руб.</p>
+						<b>Итого: 750 руб.</b>
 						<a class="btn" href="#">Оформить заказ</a>
 					</div>
 				</div>
-				<div class="extra">
-					<p>с 10 до 20, ежедневно</p>
-					<p>8 812 450 25 25</p>
-				</div>
+			</div>
+			<div class="extra">
+				<p>с 10 до 20, ежедневно</p>
+				<p>8 812 450 25 25</p>
 			</div>
 		</header>
 		<main class="container">
@@ -80,7 +80,7 @@
 			</section>
 			<h1>Сливочное мороженое</h1>
 			<section class="filters">
-				<form class="filters-form" action="#" method="post" oninput="price-min.value=range-price.value">
+				<form class="filters-form" action="#" method="post">
 					<label for="sort">Сортировка</label>
 					<div class="filter-decor">
 						<select name="sort" id="sort">
@@ -90,32 +90,176 @@
 							<option value="fat">по жирности</option>
 						</select>
 					</div>
-					<label for="range-price">Цена:
-						<output name="price-min">100</output> руб.- 
-						<output name="price-max">500</output> руб.
-					</label>
+					<label for="range-price">Цена:</label>
+					<output name="price-min">100</output> руб.- 
+					<output name="price-max">500</output> руб.
 					<div class="filter-decor">
 						<input id="range-price" name="range-price" type="range" min="50" max="2000" step="10">
 					</div>
 					<label>Жирность</label>
 					<div class="filter-decor">
-						<input class="filter-fat" id="no-fat" type="radio">
+						<input class="filter-fat" id="no-fat" name="fat" type="radio">
 						<label for="no-fat">0%</label>
-						<input class="filter-fat" id="ten" type="radio" checked>
+						<input class="filter-fat" id="ten" name="fat" type="radio" checked>
 						<label for="ten">до 10%</label>
-						<input class="filter-fat" id="thirty" type="radio">
+						<input class="filter-fat" id="thirty" name="fat" type="radio">
 						<label for="thirty">до 30%</label>
-						<input class="filter-fat" id="thirty-more" type="radio">
+						<input class="filter-fat" id="thirty-more" name="fat" type="radio">
 						<label for="thirty-more">выше 30%</label>
 					</div>
-					<label for="">Наполнители:</label>
+					<label>Наполнители:</label>
 					<div class="filter-decor">
-						<input name="chocolate" type="checkbox">
-						<input type="sugar">
-						<input type="fruit">
-						<input type="syrup">
-						<input type="jams">
+						<input id="chocolate" name="chocolate" type="checkbox" checked>
+						<label for="chocolate">шоколадные</label>
+						<input id="sugar" name="sugar" type="checkbox" checked>
+						<label for="sugar">сахарные присыпки</label>
+						<input id="fruit" name="fruit" type="checkbox">
+						<label for="fruit">фрукты</label>
+						<input id="syrup" name="syrup" type="checkbox">
+						<label for="syrup">сиропы</label>
+						<input id="jams" name="jams" type="checkbox">
+						<label for="jams">джемы</label>
 					</div>
+					<button class="btn" type="submit">Применить</button>
 				</form>
 			</section>
+			<section class="goods">
+				<article class="goods-item">
+					<a href="#">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+					</a>
+					<p class="price">310 Р<span>/кг</span></p>
+					<a href="#">
+						<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+					</a>
+				</article>
+				<article class="goods-item">
+					<a href="#">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+					</a>
+					<p class="price">380 Р<span>/кг</span></p>
+					<a href="#">
+						<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
+					</a>
+				</article>
+				<article class="goods-item">
+					<a href="#">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочно-кофейное с кусочками шоколада">
+					</a>
+					<p class="price">355 Р<span>/кг</span></p>
+					<a href="#">
+						<p>Сливочно-кофейное с кусочками шоколада</p>
+					</a>
+				</article>
+				<article class="goods-item">
+					<a href="#">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочное крем-брюле с карамельной подливкой">
+					</a>
+					<p class="price">415 Р<span>/кг</span></p>
+					<a href="#">
+						<p>Сливочное крем-брюле с карамельной подливкой</p>
+					</a>
+				</article>
+				<article class="goods-item">
+					<a href="#">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочное с брусничным джемом">
+					</a>
+					<p class="price">325 Р<span>/кг</span></p>
+					<a href="#">
+						<p>Сливочное с брусничным джемом</p>
+					</a>
+				</article>
+				<article class="goods-item">
+					<a href="#">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочно-черничное с цельными ягодами черники">
+					</a>
+					<p class="price">410 Р<span>/кг</span></p>
+					<a href="#">
+						<p>Сливочно-черничное с цельными ягодами черники</p>
+					</a>
+				</article>
+				<article class="goods-item">
+					<a href="#">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочно-лимонное с карамельной присыпкой">
+					</a>
+					<p class="price">375 Р<span>/кг</span></p>
+					<a href="#">
+						<p>Сливочно-лимонное с карамельной присыпкой</p>
+					</a>
+				</article>
+				<article class="goods-item">
+					<a href="#">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочное с шоколадной стружкой">
+					</a>
+					<p class="price">320 Р<span>/кг</span></p>
+					<a href="#">
+						<p>Сливочное с шоколадной стружкой</p>
+					</a>
+				</article>
+				<article class="goods-item">
+					<a href="#">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочно-ванильное с кусочками шоколада">
+					</a>
+					<p class="price">440 Р<span>/кг</span></p>
+					<a href="#">
+						<p>Сливочно-ванильное с кусочками шоколада</p>
+					</a>
+				</article>
+				<article class="goods-item">
+					<a href="#">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочное с ментоловым сиропом">
+					</a>
+					<p class="price">435 Р<span>/кг</span></p>
+					<a href="#">
+						<p>Сливочное с ментоловым сиропом</p>
+					</a>
+				</article>
+				<article class="goods-item">
+					<a href="#">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочное с кусочками черного шоколада">
+					</a>
+					<p class="price">355 Р<span>/кг</span></p>
+					<a href="#">
+						<p>Сливочное с кусочками черного шоколада</p>
+					</a>
+				</article>
+				<article class="goods-item">
+					<a href="#">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочное с мятным сиропом">
+					</a>
+					<p class="price">420 Р<span>/кг</span></p>
+					<a href="#">
+						<p>Сливочное с мятным сиропом</p>
+					</a>
+				</article>
+			</section>
+			<section class="paginator">
+			  <span class="prev">Назад</span>
+				<span class="page active">1</span>
+				<a class="page" href="#">2</a>
+				<a class="page" href="#">3</a>
+				<a class="page" href="#">4</a>
+				<a class="page" href="#">5</a>
+				<a class="next" href="#">Вперед</a>
+			</section>
 		</main>
+		<footer class="main-footer">
+			<section class="footer-social">
+				<a class="social-btn social-btn-tv" href="#">Твиттер</a>
+				<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+				<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+				<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+			</section>
+			<section class="information">
+				<a class="providers" href="#">Для поставщиков</a>
+				<a href="#">О производстве</a>
+				<a href="#">Наши документы</a>
+				<a href="#">Экологические стандарты</a>
+			</section>
+			<section class="footer-copyright">
+				 <img class="logo-htmlacademy" src="http://placehold.it/150x100" width="" height="" alt="HTML Academy">
+				<span>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2016</span>
+			</section>
+		</footer>
+	</body>
+</html>
