@@ -15,7 +15,7 @@
 						<a class="catalog" href="#">Каталог</a>
 							<ul class="secondary-menu pop-up">
 								<li><a href="#">Новинки</a></li>
-								<li><a href="#">Сливочное</a></li>
+								<li><a href="catalog.html">Сливочное</a></li>
 								<li><a href="#">Щербеты</a></li>
 								<li><a href="#">Фруктовый лед</a></li>
 								<li><a href="#">Мелорин</a></li>
@@ -29,10 +29,11 @@
 					</li>
 				</ul>
 			</nav>
-			<div class="wrapper">
-				<div class="search pop-up">
+			<div class="wrapper-search-user">
+				<form class="search pop-up" action="#" method="post">
 					<input name="search" type="search" placeholder="Что ищем?">
-				</div>
+					<input type="submit">
+				</form>
 				<div class="user-block">
 					<a class="login" href="#">Вход</a>
 					<form class="login-form pop-up" action="#" method="post">
@@ -51,7 +52,7 @@
 								<span class="weight">1,5 кг
 									<span class="price">х 200 руб.</span>
 								</span>
-								<span>300 руб.</span>
+								300 руб.
 							</li>
 							<li>
 								<button class="btn-delete">Удалить</button>
@@ -59,7 +60,7 @@
 								<span class="weight">1,5 кг
 									<span class="price">х 300 руб.</span>
 								</span>
-								<span>450 руб.</span>
+								450 руб.
 							</li>
 						</ul>
 						<b>Итого: 750 руб.</b>
@@ -69,7 +70,7 @@
 			</div>
 			<div class="extra">
 				<p>с 10 до 20, ежедневно</p>
-				<p>8 812 450 25 25</p>
+				<b>8 812 450 25 25</b>
 			</div>
 		</header>
 		<main>
@@ -81,7 +82,7 @@
 					<p>Крем-брюле и пломбир с малиновым джемом</p>
 					<a class="btn" href="#">Давайте оба!</a>
 				</div>
-				<div class="slide slide-limon">
+				<div class="slide slide-lemon">
 					<div class="slider-image">
 						<img src="http://placehold.it/150x100" width="" height="" alt="Шоколадный пломбир и лимонный сорбет">
 					</div>
@@ -95,18 +96,20 @@
 					<p>Пломбир с помадкой и клубничный щербет</p>
 					<a class="btn" href="#">Давайте оба!</a>
 				</div>
-				<button class="drop drop-first"></button>
-				<button class="drop drop-second"></button>
-				<button class="drop drop-third"></button>
+				<div class="sliders-nav">
+					<button class="drop drop-first"></button>
+					<button class="drop drop-second"></button>
+					<button class="drop drop-third"></button>
+				</div>
 			</section>
 			<section class="banners">
 				<article class="banner banner-first">
-					<h2>Малинка даром!</h2>
+					<h1>Малинка даром!</h1>
 					<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
 					<a class="btn" href="#">Хочу шоколадки!</a>
 				</article>
 				<article class="banner banner-second">
-					<h2>Шоколадки даром!</h2>
+					<h1>Шоколадки даром!</h1>
 					<p>При покупке 2 кг пломбира, добавим в ваш заказ банку малинового варенья бесплатно.</p>
 					<a class="btn" href="#">Хочу варенье!</a>
 				</article>
@@ -117,50 +120,42 @@
 						<img class="hit-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
 					</a>
 					<p class="price">310 Р<span>/кг</span></p>
-					<a href="#">
-						<p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-					</a>
+					<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 				</article>
 				<article class="hit-item">
 					<a href="#">
 						<img class="hit-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочно-кофейное с кусочками шоколада">
 					</a>
 					<p class="price">380 Р<span>/кг</span></p>
-					<a href="#">
-						<p>Сливочно-кофейное с кусочками шоколада</p>
-					</a>
+					<a href="#">Сливочно-кофейное с кусочками шоколада</a>
 				</article>
 				<article class="hit-item">
 					<a href="#">
 						<img class="hit-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочно-клубничное с присыпкой из белого шоколада">
 					</a>
 					<p class="price">355 Р<span>/кг</span></p>
-					<a href="#">
-						<p>Сливочно-клубничное с присыпкой из белого шоколада</p>
-					</a>
+					<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
 				</article>
 				<article class="hit-item">
 					<a href="#">
 						<img class="hit-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочное крем-брюле с карамельной подливкой">
 					</a>
 					<p class="price">415 Р<span>/кг</span></p>
-					<a href="#">
-						<p>Сливочное крем-брюле с карамельной подливкой</p>
-					</a>
+					<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
 				</article>
 			</section>
 			<section class="advantages">
 				<h2>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
 				<ul>
-					<li class="advantage advantage-own"><p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p></li>
-					<li class="advantage advantage-natural"><p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p></li>
-					<li class="advantage advantage-farmers"><p>Закупка ингредиетнов производится только у проверенных фермерских хозяйств и компаний с которыми нас связывает долговременное сотрудничество.</p></li>
-					<li class="advantage advantage-icebox"><p>Доставка нашего мороженого осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</p></li>
+					<li class="advantage advantage-own">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+					<li class="advantage advantage-natural">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+					<li class="advantage advantage-farmers">Закупка ингредиетнов производится только у проверенных фермерских хозяйств и компаний с которыми нас связывает долговременное сотрудничество.</li>
+					<li class="advantage advantage-icebox">Доставка нашего мороженого осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет ему сохранить свой превосходный вкус.</li>
 				</ul>
 			</section>
-			<div class="wrapper">
+			<div class="wrapper-news-subs">
 				<section class="news">
-					<p>Новое в нашем блоге</p>
+					<h2>Новое в нашем блоге</h2>
 					<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
 				</section>
 				<section class="subscription">
@@ -172,6 +167,7 @@
 				</section>
 			</div>
 			<section class="location">
+			  <img src="#" width="" height="" alt="Карта">
 				<div class="contacts">
 					<p>Адрес главного офиса и<br>
 					офлайн магазина:<br>
