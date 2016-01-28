@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>HTML Academy: Глейси</title>
+		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
 		<header class="main-header">
@@ -115,33 +116,37 @@
 				</article>
 			</section>
 			<section class="hits">
-				<article class="hit-item">
+				<article class="goods-item hit">
 					<a href="#">
-						<img class="hit-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
 					</a>
 					<p class="price">310 Р<span>/кг</span></p>
 					<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+					<button class="btn pop-up">Быстрый просмотр</button>
 				</article>
-				<article class="hit-item">
+				<article class="goods-item hit">
 					<a href="#">
-						<img class="hit-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочно-кофейное с кусочками шоколада">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочно-кофейное с кусочками шоколада">
 					</a>
 					<p class="price">380 Р<span>/кг</span></p>
 					<a href="#">Сливочно-кофейное с кусочками шоколада</a>
+					<button class="btn pop-up">Быстрый просмотр</button>
 				</article>
-				<article class="hit-item">
+				<article class="goods-item hit">
 					<a href="#">
-						<img class="hit-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочно-клубничное с присыпкой из белого шоколада">
 					</a>
 					<p class="price">355 Р<span>/кг</span></p>
 					<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+					<button class="btn pop-up">Быстрый просмотр</button>
 				</article>
-				<article class="hit-item">
+				<article class="goods-item hit">
 					<a href="#">
-						<img class="hit-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочное крем-брюле с карамельной подливкой">
+						<img class="item-image" src="http://placehold.it/150x100" width="" height="" alt="Сливочное крем-брюле с карамельной подливкой">
 					</a>
 					<p class="price">415 Р<span>/кг</span></p>
 					<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+					<button class="btn pop-up">Быстрый просмотр</button>
 				</article>
 			</section>
 			<section class="advantages">
@@ -155,19 +160,21 @@
 			</section>
 			<div class="wrapper-news-subs">
 				<section class="news">
-					<h2>Новое в нашем блоге</h2>
+					<h3>Новое в нашем блоге</h3>
 					<a href="#">10 способов сервировки фруктовых щербетов к столу</a>
 				</section>
 				<section class="subscription">
 					<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-					<form class="subs-form pop-up" action="#" method="post">
+					<form class="subscription-form" action="#" method="post">
 						<input name="email" type="email" placeholder="Электронная почта">
 						<button class="btn" type="submit">Отправить</button>
 					</form>
 				</section>
 			</div>
 			<section class="location">
-			  <img src="#" width="" height="" alt="Карта">
+			  <div class="map-image">
+			  	<img src="#" width="" height="" alt="Карта">
+			  </div>
 				<div class="contacts">
 					<p>Адрес главного офиса и<br>
 					офлайн магазина:<br>
@@ -202,7 +209,7 @@
 				<a href="#">Экологические стандарты</a>
 			</section>
 			<section class="footer-copyright">
-				 <img class="logo-htmlacademy" src="http://placehold.it/150x100" width="" height="" alt="HTML Academy">
+				<img class="logo-htmlacademy" src="http://placehold.it/150x100" width="" height="" alt="HTML Academy">
 				<span>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2016</span>
 			</section>
 		</footer>
