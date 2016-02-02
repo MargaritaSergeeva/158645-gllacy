@@ -1,21 +1,213 @@
 body {
-	background-color: grey;
+	padding: 0;
+	margin: 0;
+	width: 1200px;
+	background-image: url("../img/catalog/catalog.png");
+	background-size: 1200px auto;
+	background-repeat: no-repeat;
 	font-size: 16px;
 	line-height: 22px;
-	font-color: #ffffff;
+	color: blue;
 	font-family: "Roboto", "Arial", sans-serif;
 }
 
 h1 {
 	font-size: 35px;
-	line-height: 30px;
-	font-color: #ffffff;
+	line-height: 35px;
 	font-weight: bold;	
 }
 
 h2 {
+	font-size: 35px;
+	line-height: 35px;
+	font-weight: bold;
+}
+
+h3 {
 	font-size: 24px;
 	line-height: 30px;
-	font-color: #323232;
-	font-weight: medium;
+	color: #323232;
+	font-weight: bold;/*в макете medium*/
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.pop-up {
+	display: none;
+}
+
+/*header*/
+.main-header {
+	padding-left: 20px;
+	padding-right: 27px;
+	border:1px solid red;
+}
+
+.logo {
+	float: left;
+	width: 154px;
+	min-height: 80px;
+	margin-right: 20px;
+}
+
+.main-navigation {
+	float: left;
+	width: 680px;
+	min-height: 80px;
+	margin-right: 26px;
+}
+
+.wrapper-search-user {
+	float: left;
+	width: 267px;
+	min-height: 80px;
+}
+
+.extra {
+	position: absolute;
+	top: 50px;
+	right: 160px;
+}
+
+.main-menu li{
+	display: inline-block;
+}
+
+/*slider*/
+.slider {
+	width: 1146px;
+	min-height: 230px;
+	margin: 0 auto;
+	margin-top: 265px;
+	margin-bottom: 20px;
+}
+
+.slider-image {
+	position: absolute;
+	top:0;
+	left: 80px;
+}
+
+.slide-lemon {
+	display: none;
+}
+
+.slide-strawberry {
+	display: none;
+}
+
+/*banners*/
+.banners {
+	width: 1146px;
+	min-height: 250px;
+	margin: 0 auto;
+	margin-bottom: 25px;
+}
+
+.banner {
+	float: left;
+	width: 560px;
+	min-height: 230px;
+}
+
+.banner-first {
+	margin-right: 26px;
+}
+
+/*hits*/
+.hits {
+	width: 1146px;
+	margin: 0 auto;
+	margin-bottom: 35px;
+	font-size: 0;
+	
+}
+
+.goods-item {
+	display: inline-block;
+	vertical-align: top;
+	width: 267px;
+	min-height: 334px;
+	margin-right: 26px;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.goods-item:last-child {
+	margin-right: 0;
+}
+
+.goods-item a {
+	display: block;
+}
+
+/*advantage*/
+.advantages {
+	width: 1146px;
+	min-height: 306px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+/*news-subs*/
+.wrapper-news-subs {
+	width: 1146px;
+	min-height: 220px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.news-subs	{
+	width: 560px;
+	min-height: 220px;
+}
+
+.news {
+	float: left;
+}
+
+.subscription {
+	float: right;
+}
+
+/*location*/
+.location {
+	width: 1200px;
+	min-height: 430px;
+}
+
+.contacts {
+	position: absolute;
+	right: 250px;
+	top: 1950px;
+}
+
+/*footer*/
+.main-footer {
+	width:1200px;
+	padding: 0 27px;
+}
+
+.footer-social {
+	float: left;
+	width: 267px;
+	min-height: 103px;
+	margin-right: 26px;
+}
+
+.information {
+	float: left;
+	width: 560px;
+	min-height: 103px;
+	margin-right: 26px;
+}
+
+.footer-copyright {
+	float: left;
+	width: 190px;
+	min-height: 103px;
 }

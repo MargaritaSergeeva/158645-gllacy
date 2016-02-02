@@ -6,9 +6,9 @@
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
-		<header class="main-header">
+		<header class="main-header clearfix">
 			<div class="logo">
-				<a href="index.html"><img src="img/logo.svg" width="154" height="64" alt="Gllacy shop"></a>
+				<a href="index.html"><img src="img/header/logo.svg" width="154" height="64" alt="Gllacy shop"></a>
 			</div>
 			<nav class="main-navigation">
 				<ul class="main-menu">
@@ -48,7 +48,7 @@
 					<div class="in-cart pop-up">
 						<ul>
 							<li>
-								<button class="btn-delete">Удалить</button>
+								<button class="btn-delete" type="button">Удалить</button>
 								<span class="item">Пломбир с апельсиновым джемом</span>
 								<span class="weight">1,5 кг
 									<span class="price">х 200 руб.</span>
@@ -56,7 +56,7 @@
 								300 руб.
 							</li>
 							<li>
-								<button class="btn-delete">Удалить</button>
+								<button class="btn-delete" type="button">Удалить</button>
 								<span class="item">Клубничный пломбир с присыпкой из белого шоколада</span>
 								<span class="weight">1,5 кг
 									<span class="price">х 300 руб.</span>
@@ -92,13 +92,19 @@
 							<option value="fat">по жирности</option>
 						</select>
 					</div>
-					<label for="range-price">Цена:</label>
-					<output name="price-min">100</output> руб.- 
-					<output name="price-max">500</output> руб.
+					<legend>Цена:</legend>
+					<input id="price-min" name="price-min" type="text" value="100"><span>руб.-</span> 
+					<input id="price-max" name="price-max" type="text" value="500"><span>руб.</span>
 					<div class="filter-decor">
-						<input id="range-price" name="range-price" type="range" min="50" max="2000" step="10">
+						<div class="range-controls">
+							<div class="range-scale">
+								<div class="range-bar"></div>
+							</div>
+							<div class="range-toggle min-toggle"></div>
+							<div class="range-toggle max-toggle"></div>
+						</div>
 					</div>
-					<p>Жирность</p>
+					<legend>Жирность</legend>
 					<div class="filter-decor">
 						<input class="filter-fat" id="no-fat" name="fat" type="radio">
 						<label for="no-fat">0%</label>
@@ -109,7 +115,7 @@
 						<input class="filter-fat" id="thirty-more" name="fat" type="radio">
 						<label for="thirty-more">выше 30%</label>
 					</div>
-					<p>Наполнители:</p>
+					<legend>Наполнители:</legend>
 					<div class="filter-decor">
 						<input id="chocolate" name="chocolate" type="checkbox" checked>
 						<label for="chocolate">шоколадные</label>
@@ -128,99 +134,111 @@
 			<section class="goods">
 				<article class="goods-item">
 					<a href="#">
-						<img class="item-image" src="img/orange-ice-cream.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+						<img class="item-image" src="img/for-all/items/orange-ice-cream.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
 					</a>
-					<p class="price">310 Р<span>/кг</span></p>
+					<span class="item-price">310 Р</span>
+					<span class="item-weight">/кг</span>
 					<a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-					<button class="btn pop-up">Быстрый просмотр</button>
+					<button class="btn pop-up" type="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods-item">
 					<a href="#">
-						<img class="item-image" src="img/chocolate-ice-cream.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+						<img class="item-image" src="img/for-all/items/chocolate-ice-cream.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
 					</a>
-					<p class="price">380 Р<span>/кг</span></p>
+					<span class="item-price">380 Р</span>
+					<span class="item-weight">/кг</span>
 					<a href="#">Сливочно-кофейное с кусочками шоколада</a>
-					<button class="btn pop-up">Быстрый просмотр</button>
+					<button class="btn pop-up" type="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods-item">
 					<a href="#">
-						<img class="item-image" src="img/strawberry-ice-cream.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+						<img class="item-image" src="img/for-all/items/strawberry-ice-cream.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
 					</a>
-					<p class="price">355 Р<span>/кг</span></p>
+					<span class="item-price">355 Р</span>
+					<span class="item-weight">/кг</span>
 					<a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-					<button class="btn pop-up">Быстрый просмотр</button>
+					<button class="btn pop-up" type="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods-item">
 					<a href="#">
-						<img class="item-image" src="img/creme-brulee-ice-cream.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+						<img class="item-image" src="img/for-all/items/creme-brulee-ice-cream.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
 					</a>
-					<p class="price">415 Р<span>/кг</span></p>
+					<span class="item-price">415 Р</span>
+					<span class="item-weight">/кг</span>
 					<a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-					<button class="btn pop-up">Быстрый просмотр</button>
+					<button class="btn pop-up" type="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods-item">
 					<a href="#">
-						<img class="item-image" src="img/lingonberry-ice-cream.png" width="267" height="267" alt="Сливочное с брусничным джемом">
+						<img class="item-image" src="img/catalog/items/lingonberry-ice-cream.png" width="267" height="267" alt="Сливочное с брусничным джемом">
 					</a>
-					<p class="price">325 Р<span>/кг</span></p>
+					<span class="item-price">325 Р</span>
+					<span class="item-weight">/кг</span>
 					<a href="#">Сливочное с брусничным джемом</a>
-					<button class="btn pop-up">Быстрый просмотр</button>
+					<button class="btn pop-up" type="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods-item">
 					<a href="#">
-						<img class="item-image" src="img/blueberry-ice-cream.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
+						<img class="item-image" src="img/catalog/items/blueberry-ice-cream.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
 					</a>
-					<p class="price">410 Р<span>/кг</span></p>
+					<span class="item-price">410 Р</span>
+					<span class="item-weight">/кг</span>
 					<a href="#">Сливочно-черничное с цельными ягодами черники</a>
-					<button class="btn pop-up">Быстрый просмотр</button>
+					<button class="btn pop-up" type="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods-item">
 					<a href="#">
-						<img class="item-image" src="img/lemon-ice-cream.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
+						<img class="item-image" src="img/catalog/items/lemon-ice-cream.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
 					</a>
-					<p class="price">375 Р<span>/кг</span></p>
+					<span class="item-price">375 Р</span>
+					<span class="item-weight">/кг</span>
 					<a href="#">Сливочно-лимонное с карамельной присыпкой</a>
-					<button class="btn pop-up">Быстрый просмотр</button>
+					<button class="btn pop-up" type="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods-item">
 					<a href="#">
-						<img class="item-image" src="img/ice-cream-with-chocolate-chips.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
+						<img class="item-image" src="img/catalog/items/ice-cream-with-chocolate-chips.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
 					</a>
-					<p class="price">320 Р<span>/кг</span></p>
+					<span class="item-price">320 Р</span>
+					<span class="item-weight">/кг</span>
 					<a href="#">Сливочное с шоколадной стружкой</a>
-					<button class="btn pop-up">Быстрый просмотр</button>
+					<button class="btn pop-up" type="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods-item">
 					<a href="#">
-						<img class="item-image" src="img/vanilla-ice-cream.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
+						<img class="item-image" src="img/catalog/items/vanilla-ice-cream.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
 					</a>
-					<p class="price">440 Р<span>/кг</span></p>
+					<span class="item-price">440 Р</span>
+					<span class="item-weight">/кг</span>
 					<a href="#">Сливочно-ванильное с кусочками шоколада</a>
-					<button class="btn pop-up">Быстрый просмотр</button>
+					<button class="btn pop-up" type="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods-item">
 					<a href="#">
-						<img class="item-image" src="img/ice-cream-with-menthol-syrup.png" width="267" height="267" alt="Сливочное с ментоловым сиропом">
+						<img class="item-image" src="img/catalog/items/ice-cream-with-menthol-syrup.png" width="267" height="267" alt="Сливочное с ментоловым сиропом">
 					</a>
-					<p class="price">435 Р<span>/кг</span></p>
+					<span class="item-price">435 Р</span>
+					<span class="item-weight">/кг</span>
 					<a href="#">Сливочное с ментоловым сиропом</a>
-					<button class="btn pop-up">Быстрый просмотр</button>
+					<button class="btn pop-up" type="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods-item">
 					<a href="#">
-						<img class="item-image" src="img/ice-cream-with-pieces-of-dark-chocolate.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
+						<img class="item-image" src="img/catalog/items/ice-cream-with-pieces-of-dark-chocolate.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
 					</a>
-					<p class="price">355 Р<span>/кг</span></p>
+					<span class="item-price">355 Р</span>
+					<span class="item-weight">/кг</span>
 					<a href="#">Сливочное с кусочками черного шоколада</a>
-					<button class="btn pop-up">Быстрый просмотр</button>
+					<button class="btn pop-up" type="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods-item">
 					<a href="#">
-						<img class="item-image" src="img/ice-cream-with-mint-syrup.png" width="267" height="267" alt="Сливочное с мятным сиропом">
+						<img class="item-image" src="img/catalog/items/ice-cream-with-mint-syrup.png" width="267" height="267" alt="Сливочное с мятным сиропом">
 					</a>
-					<p class="price">420 Р<span>/кг</span></p>
+					<span class="item-price">420 Р</span>
+					<span class="item-weight">/кг</span>
 					<a href="#">Сливочное с мятным сиропом</a>
-					<button class="btn pop-up">Быстрый просмотр</button>
+					<button class="btn pop-up" type="button">Быстрый просмотр</button>
 				</article>
 			</section>
 			<section class="paginator">
@@ -233,7 +251,7 @@
 				<a class="next" href="#">Вперед</a>
 			</section>
 		</main>
-		<footer class="main-footer">
+		<footer class="main-footer clearfix">
 			<section class="footer-social">
 				<a class="social-btn social-btn-tv" href="#">Твиттер</a>
 				<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
@@ -247,7 +265,7 @@
 				<a href="#">Экологические стандарты</a>
 			</section>
 			<section class="footer-copyright">
-				<img class="logo-htmlacademy" src="img/logo-htmlacademy.svg" width="108" height="37" alt="HTML Academy">
+				<img class="logo-htmlacademy" src="img/footer/logo-htmlacademy.svg" width="108" height="37" alt="HTML Academy">
 				<span>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2016</span>
 			</section>
 		</footer>
