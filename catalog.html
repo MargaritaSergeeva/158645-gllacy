@@ -6,6 +6,7 @@
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
+<!-- header -->
 		<header class="main-header clearfix">
 			<div class="logo">
 				<a href="index.html"><img src="img/header/logo.svg" width="154" height="64" alt="Gllacy shop"></a>
@@ -30,7 +31,7 @@
 					</li>
 				</ul>
 			</nav>
-			<div class="wrapper">
+			<div class="wrapper-search-user">
 				<form class="search pop-up" action="#" method="post">
 					<input name="search" type="search" placeholder="Что ищем?">
 					<input type="submit">
@@ -74,7 +75,8 @@
 				<b>8 812 450 25 25</b>
 			</div>
 		</header>
-		<main class="container">
+<!-- main -->		
+		<main class="clearfix center">
 			<section class="breadcrumbs">
 				<a class="crumb" href="index.html">Главная</a>
 				<a class="crumb" href="#">Каталог</a>
@@ -83,6 +85,7 @@
 			<h1>Сливочное мороженое</h1>
 			<section class="filters">
 				<form class="filters-form" action="#" method="post">
+				<div class="filter filter-sort">
 					<label for="sort">Сортировка</label>
 					<div class="filter-decor">
 						<select name="sort" id="sort">
@@ -92,6 +95,8 @@
 							<option value="fat">по жирности</option>
 						</select>
 					</div>
+				</div>
+				<div class="filter filter-price">
 					<legend>Цена:</legend>
 					<input id="price-min" name="price-min" type="text" value="100"><span>руб.-</span> 
 					<input id="price-max" name="price-max" type="text" value="500"><span>руб.</span>
@@ -104,17 +109,21 @@
 							<div class="range-toggle max-toggle"></div>
 						</div>
 					</div>
+				</div>
+				<div class="filter filter-fat">
 					<legend>Жирность</legend>
 					<div class="filter-decor">
-						<input class="filter-fat" id="no-fat" name="fat" type="radio">
+						<input class="fat" id="no-fat" name="fat" type="radio">
 						<label for="no-fat">0%</label>
-						<input class="filter-fat" id="ten" name="fat" type="radio" checked>
+						<input class="fat" id="ten" name="fat" type="radio" checked>
 						<label for="ten">до 10%</label>
-						<input class="filter-fat" id="thirty" name="fat" type="radio">
+						<input class="fat" id="thirty" name="fat" type="radio">
 						<label for="thirty">до 30%</label>
-						<input class="filter-fat" id="thirty-more" name="fat" type="radio">
+						<input class="fat" id="thirty-more" name="fat" type="radio">
 						<label for="thirty-more">выше 30%</label>
 					</div>
+				</div>
+				<div class="filter filter-fillers">
 					<legend>Наполнители:</legend>
 					<div class="filter-decor">
 						<input id="chocolate" name="chocolate" type="checkbox" checked>
@@ -128,6 +137,7 @@
 						<input id="jams" name="jams" type="checkbox">
 						<label for="jams">джемы</label>
 					</div>
+				</div>
 					<button class="btn" type="submit">Применить</button>
 				</form>
 			</section>
@@ -251,7 +261,8 @@
 				<a class="next" href="#">Вперед</a>
 			</section>
 		</main>
-		<footer class="main-footer clearfix">
+<!-- footer -->
+		<footer class="main-footer clearfix center">
 			<section class="footer-social">
 				<a class="social-btn social-btn-tv" href="#">Твиттер</a>
 				<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
