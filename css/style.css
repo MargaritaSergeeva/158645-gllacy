@@ -1,4 +1,8 @@
-header, footer, main, nav, section, article, div, form{outline: 1px solid #ff00ff}
+div {outline: 1px solid #ff00ff}
+header, footer {outline: 1px solid white}
+nav, section, article {outline: 1px solid yellow}
+li, ul {outline: 1px solid red}
+form {outline: 1px solid blue}
 
 body {
 	padding: 0;
@@ -6,7 +10,8 @@ body {
 	width: 1200px;
 	font-size: 16px;
 	line-height: 22px;
-	color: blue;
+	background: #849d8f;
+	color: #ffffff;
 	font-family: "Roboto", "Arial", sans-serif;
 }
 
@@ -45,7 +50,7 @@ h3 {
 	margin: 0 auto;
 }
 
-/*header*/
+/*###################################################header#####################################################*/
 .main-header {
 	position: relative;
 	padding-left: 20px;
@@ -82,7 +87,7 @@ h3 {
 	display: inline-block;
 }
 
-/*footer*/
+/*########################################################footer################################################*/
 .main-footer {
 	width:1200px;
 	padding: 0 27px;
@@ -98,7 +103,7 @@ h3 {
 	margin-right: 26px;
 }
 
-.information {
+.footer-information {
 	float: left;
 	width: 560px;
 	min-height: 100px;
@@ -111,7 +116,7 @@ h3 {
 	min-height: 100px;
 }
 
-/*goods*/
+/*######################################################goods######################################################*/
 .goods {
 	font-size: 0;
 	min-height: 334px;
@@ -136,9 +141,11 @@ h3 {
 	display: block;
 }
 
-/*index*/
+/*##################################################################################################################*/
+/*######################################################index#####################################################*/
+/*##################################################################################################################*/
 
-/*slider*/
+/*######################################################slider####################################################*/
 .slider {
 	position: relative;
 	min-height: 230px;
@@ -149,7 +156,8 @@ h3 {
 .slider-image {
 	position: absolute;
 	top:-380px;
-	left: 50px;
+	left: 50%;
+	margin-left:-523px;
 	width: 1046px;
 }
 
@@ -161,7 +169,7 @@ h3 {
 	display: none;
 }
 
-/*banners*/
+/*######################################################banners##########################################################*/
 .banners {
 	min-height: 235px;
 	margin-bottom: 35px;
@@ -178,16 +186,40 @@ h3 {
 }
 
 
-/*advantage*/
+/*#####################################################advantage##########################################################*/
 .advantages {
 	min-height: 306px;
 	margin-bottom: 40px;
+	padding-top: 1px;
+	font-size: 0;
 }
 .advantages h3 {
-	margin: 0;
+	margin-bottom: 5px;
 }
 
-/*news-subs*/
+.advantages ul {
+	padding: 0;
+}
+
+.advantages li {
+	display: inline-block;
+	vertical-align: top;
+	width: 560px;
+	min-height: 85px;
+	margin-right: 26px;
+	list-style-type: none;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.advantages li:nth-child(2n) {
+	margin-right: 0;
+}
+
+
+
+
+/*#####################################################news-subs######################################################*/
 .wrapper-news-subs {
 	min-height: 220px;
 	margin-bottom: 40px;
@@ -206,8 +238,10 @@ h3 {
 	float: right;
 }
 
-/*location*/
+/*#################################################location#########################################################*/
 .location {
+	width: 1200px;
+	position: relative;
 	margin-left: -27px;
 }
 .map-image {
@@ -217,29 +251,30 @@ h3 {
 
 .contacts {
 	position: absolute;
-	right: 250px;
-	top: 1950px;
+	right: 27px;
+	top: 65px;
 }
 
 
+/*##################################################################################################################*/
+/*##############################################################catalog###############################################*/
+/*######################################################################################################################*/
 
-/*catalog*/
-
-/*breadcrumbs*/
+/*###########################################################breadcrumbs###############################################*/
 .breadcrumbs {
 	min-height: 26px;
 	margin-top: 15px;
 	margin-bottom: 0;
 }
 
-/*main>h1*/
+/*#############################################################main>h1#################################################*/
 main>h1 {
 	margin: 0;
 	margin-bottom: 25px;
 	padding: 0;
 }
 
-/*filters*/
+/*############################################################filters###################################################*/
 
 .filters-form {
 	min-height: 140px;
@@ -272,7 +307,7 @@ main>h1 {
 	margin-right: 10px;
 }
 
-/*paginator*/
+/*#####################################################paginator######################################################*/
 .paginator {
 	float: right;
 	width: 190px;

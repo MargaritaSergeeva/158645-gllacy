@@ -85,59 +85,62 @@
 			<h1>Сливочное мороженое</h1>
 			<section class="filters">
 				<form class="filters-form" action="#" method="post">
-				<div class="filter filter-sort">
-					<label for="sort">Сортировка</label>
-					<div class="filter-decor">
-						<select name="sort" id="sort">
-							<option value="popular" selected>по популярности</option>
-							<option value="low-price">сначала недорогие</option>
-							<option value="high-price">сначала дорогие</option>
-							<option value="fat">по жирности</option>
-						</select>
-					</div>
-				</div>
-				<div class="filter filter-price">
-					<legend>Цена:</legend>
-					<input id="price-min" name="price-min" type="text" value="100"><span>руб.-</span> 
-					<input id="price-max" name="price-max" type="text" value="500"><span>руб.</span>
-					<div class="filter-decor">
-						<div class="range-controls">
-							<div class="range-scale">
-								<div class="range-bar"></div>
-							</div>
-							<div class="range-toggle min-toggle"></div>
-							<div class="range-toggle max-toggle"></div>
+					<div class="filter filter-sort">
+						<label for="sort">Сортировка</label>
+						<div class="filter-decor">
+							<select name="sort" id="sort">
+								<option value="popular" selected>по популярности</option>
+								<option value="low-price">сначала недорогие</option>
+								<option value="high-price">сначала дорогие</option>
+								<option value="fat">по жирности</option>
+							</select>
 						</div>
 					</div>
-				</div>
-				<div class="filter filter-fat">
-					<legend>Жирность</legend>
-					<div class="filter-decor">
-						<input class="fat" id="no-fat" name="fat" type="radio">
-						<label for="no-fat">0%</label>
-						<input class="fat" id="ten" name="fat" type="radio" checked>
-						<label for="ten">до 10%</label>
-						<input class="fat" id="thirty" name="fat" type="radio">
-						<label for="thirty">до 30%</label>
-						<input class="fat" id="thirty-more" name="fat" type="radio">
-						<label for="thirty-more">выше 30%</label>
+					<div class="filter filter-price">
+						<legend>Цена:
+							<input id="price-min" name="price-min" type="text" value="100"><span>руб.-</span> 
+							<input id="price-max" name="price-max" type="text" value="500"><span>руб.</span>
+							<div class="filter-decor">
+								<div class="range-controls">
+									<div class="range-scale">
+										<div class="range-bar"></div>
+									</div>
+									<div class="range-toggle min-toggle"></div>
+									<div class="range-toggle max-toggle"></div>
+								</div>
+							</div>
+						</legend>
 					</div>
-				</div>
-				<div class="filter filter-fillers">
-					<legend>Наполнители:</legend>
-					<div class="filter-decor">
-						<input id="chocolate" name="chocolate" type="checkbox" checked>
-						<label for="chocolate">шоколадные</label>
-						<input id="sugar" name="sugar" type="checkbox" checked>
-						<label for="sugar">сахарные присыпки</label>
-						<input id="fruit" name="fruit" type="checkbox">
-						<label for="fruit">фрукты</label>
-						<input id="syrup" name="syrup" type="checkbox">
-						<label for="syrup">сиропы</label>
-						<input id="jams" name="jams" type="checkbox">
-						<label for="jams">джемы</label>
+					<div class="filter filter-fat">
+						<legend>Жирность
+							<div class="filter-decor">
+								<input class="fat" id="no-fat" name="fat" type="radio">
+								<label for="no-fat">0%</label>
+								<input class="fat" id="ten" name="fat" type="radio" checked>
+								<label for="ten">до 10%</label>
+								<input class="fat" id="thirty" name="fat" type="radio">
+								<label for="thirty">до 30%</label>
+								<input class="fat" id="thirty-more" name="fat" type="radio">
+								<label for="thirty-more">выше 30%</label>
+							</div>
+						</legend>
 					</div>
-				</div>
+					<div class="filter filter-fillers">
+						<legend>Наполнители:
+							<div class="filter-decor">
+								<input id="chocolate" name="chocolate" type="checkbox" checked>
+								<label for="chocolate">шоколадные</label>
+								<input id="sugar" name="sugar" type="checkbox" checked>
+								<label for="sugar">сахарные присыпки</label>
+								<input id="fruit" name="fruit" type="checkbox">
+								<label for="fruit">фрукты</label>
+								<input id="syrup" name="syrup" type="checkbox">
+								<label for="syrup">сиропы</label>
+								<input id="jams" name="jams" type="checkbox">
+								<label for="jams">джемы</label>
+							</div>
+						</legend>
+					</div>
 					<button class="btn" type="submit">Применить</button>
 				</form>
 			</section>
@@ -269,7 +272,7 @@
 				<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
 				<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
 			</section>
-			<section class="information">
+			<section class="footer-information">
 				<a class="providers" href="#">Для поставщиков</a>
 				<a href="#">О производстве</a>
 				<a href="#">Наши документы</a>
