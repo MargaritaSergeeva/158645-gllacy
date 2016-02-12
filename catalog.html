@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Глейси: Каталог</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic" rel="stylesheet">
+		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
@@ -71,8 +73,8 @@
 				</div>
 			</div>
 			<div class="extra">
-				<p>с 10 до 20, ежедневно</p>
-				<b>8 812 450 25 25</b>
+				<p>С 10 до 20, ежедневно</p>
+				<b>8 812 450-25-25</b>
 			</div>
 		</header>
 <!-- main -->		
@@ -97,49 +99,52 @@
 						</div>
 					</div>
 					<div class="filter filter-price">
-						<legend>Цена:
-							<input id="price-min" name="price-min" type="text" value="100"><span>руб.-</span> 
-							<input id="price-max" name="price-max" type="text" value="500"><span>руб.</span>
-							<div class="filter-decor">
-								<div class="range-controls">
-									<div class="range-scale">
-										<div class="range-bar"></div>
+						<fieldset>
+							<legend>Цена:</legend>
+								<input id="price-min" name="price-min" type="text" value="100"><span>руб.-</span> 
+								<input id="price-max" name="price-max" type="text" value="500"><span>руб.</span>
+								<div class="filter-decor">
+									<div class="range-controls">
+										<div class="range-scale">
+											<div class="range-bar"></div>
+										</div>
+										<div class="range-toggle min-toggle"></div>
+										<div class="range-toggle max-toggle"></div>
 									</div>
-									<div class="range-toggle min-toggle"></div>
-									<div class="range-toggle max-toggle"></div>
 								</div>
-							</div>
-						</legend>
+						</fieldset>
 					</div>
 					<div class="filter filter-fat">
-						<legend>Жирность
-							<div class="filter-decor">
-								<input class="fat" id="no-fat" name="fat" type="radio">
-								<label for="no-fat">0%</label>
-								<input class="fat" id="ten" name="fat" type="radio" checked>
-								<label for="ten">до 10%</label>
-								<input class="fat" id="thirty" name="fat" type="radio">
-								<label for="thirty">до 30%</label>
-								<input class="fat" id="thirty-more" name="fat" type="radio">
-								<label for="thirty-more">выше 30%</label>
-							</div>
-						</legend>
+						<fieldset>
+							<legend>Жирность</legend>
+								<div class="filter-decor">
+									<input class="fat" id="no-fat" name="fat" type="radio">
+									<label for="no-fat">0%</label>
+									<input class="fat" id="ten" name="fat" type="radio" checked>
+									<label for="ten">до 10%</label>
+									<input class="fat" id="thirty" name="fat" type="radio">
+									<label for="thirty">до 30%</label>
+									<input class="fat" id="thirty-more" name="fat" type="radio">
+									<label for="thirty-more">выше 30%</label>
+								</div>
+						</fieldset>
 					</div>
 					<div class="filter filter-fillers">
-						<legend>Наполнители:
-							<div class="filter-decor">
-								<input id="chocolate" name="chocolate" type="checkbox" checked>
-								<label for="chocolate">шоколадные</label>
-								<input id="sugar" name="sugar" type="checkbox" checked>
-								<label for="sugar">сахарные присыпки</label>
-								<input id="fruit" name="fruit" type="checkbox">
-								<label for="fruit">фрукты</label>
-								<input id="syrup" name="syrup" type="checkbox">
-								<label for="syrup">сиропы</label>
-								<input id="jams" name="jams" type="checkbox">
-								<label for="jams">джемы</label>
-							</div>
-						</legend>
+						<fieldset>
+							<legend>Наполнители:</legend>
+								<div class="filter-decor">
+									<input id="chocolate" name="chocolate" type="checkbox" checked>
+									<label for="chocolate">шоколадные</label>
+									<input id="sugar" name="sugar" type="checkbox" checked>
+									<label for="sugar">сахарные присыпки</label>
+									<input id="fruit" name="fruit" type="checkbox">
+									<label for="fruit">фрукты</label>
+									<input id="syrup" name="syrup" type="checkbox">
+									<label for="syrup">сиропы</label>
+									<input id="jams" name="jams" type="checkbox">
+									<label for="jams">джемы</label>
+								</div>
+						</fieldset>
 					</div>
 					<button class="btn" type="submit">Применить</button>
 				</form>
@@ -254,7 +259,7 @@
 					<button class="btn pop-up" type="button">Быстрый просмотр</button>
 				</article>
 			</section>
-			<section class="paginator">
+			<div class="paginator">
 			  <span class="prev">Назад</span>
 				<span class="page active">1</span>
 				<a class="page" href="#">2</a>
@@ -262,7 +267,7 @@
 				<a class="page" href="#">4</a>
 				<a class="page" href="#">5</a>
 				<a class="next" href="#">Вперед</a>
-			</section>
+			</div>
 		</main>
 <!-- footer -->
 		<footer class="main-footer clearfix center">
