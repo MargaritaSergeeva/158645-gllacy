@@ -15,10 +15,10 @@
 			</div>
 			<nav class="main-navigation">
 				<ul class="main-menu">
-					<li class="first-menu-level">
-						<a class="catalog-active" href="#">Каталог</a>
-							<ul class="secondary-menu pop-up">
-								<li><a href="#">Новинки</a></li>
+					<li class="first-menu-level catalog nav-active">
+						<a href="#">Каталог</a>
+							<ul class="second-menu pop-up pop-up-style">
+								<li class="new"><a href="#">Новинки</a></li>
 								<li><span>Сливочное</span></li>
 								<li><a href="#">Щербеты</a></li>
 								<li><a href="#">Фруктовый лед</a></li>
@@ -34,37 +34,41 @@
 				</ul>
 			</nav>
 			<div class="wrapper-search-user">
-				<form class="search pop-up" action="#" method="post">
-					<input name="search" type="search" placeholder="Что ищем?">
-					<input type="submit">
-				</form>
+				<div class="loupe">
+					<form class="search pop-up pop-up-style" action="#" method="get">
+						<input name="search" type="search" placeholder="Что ищем?">
+						<input class="pop-up" type="submit">
+					</form>
+				</div>
 				<div class="user-block">
 					<a class="login" href="#">Вход</a>
-					<form class="login-form pop-up" action="#" method="post">
+					<form class="login-form pop-up pop-up-style" action="#" method="post">
 						<input name="email" type="email" placeholder="Электронная почта">
 						<input name="password" type="password" placeholder="Пароль">
 						<button class="btn" type="submit">Войти</button>
-						<a class="for-enter" href="#">Забыли пароль?</a>
-						<a class="for-enter" href="#">Новая регистрация</a>
+						<div class="for-enter">
+							<a href="#">Забыли пароль?</a>
+							<a href="#">Новая регистрация</a>
+						</div>
 					</form>
 					<a class="cart-full" href="#">2 товара</a>
-					<div class="in-cart pop-up">
+					<div class="in-cart pop-up pop-up-style">
 						<ul>
 							<li>
 								<button class="btn-delete" type="button">Удалить</button>
+								<img class="mini-item-image" src="img/for-all/items/mini-orange-ice-cream.png" width="33" height="33" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
 								<span class="item">Пломбир с апельсиновым джемом</span>
-								<span class="weight">1,5 кг
-									<span class="price">х 200 руб.</span>
-								</span>
-								300 руб.
+								<span class="weight">1,5 кг</span>
+								<span class="price">х 200 руб.</span>
+								<span class="total">300 руб.</span>
 							</li>
 							<li>
 								<button class="btn-delete" type="button">Удалить</button>
+								<img class="mini-item-image" src="img/for-all/items/mini-strawberry-ice-cream.png" width="33" height="33" alt="Сливочно-клубничное с присыпкой из белого шоколада">
 								<span class="item">Клубничный пломбир с присыпкой из белого шоколада</span>
-								<span class="weight">1,5 кг
-									<span class="price">х 300 руб.</span>
-								</span>
-								450 руб.
+								<span class="weight">1,5 кг</span>
+								<span class="price">х 300 руб.</span>
+								<span class="total">450 руб.</span>
 							</li>
 						</ul>
 						<b>Итого: 750 руб.</b>
@@ -72,19 +76,21 @@
 					</div>
 				</div>
 			</div>
-			<div class="extra">
+			<div class="extra catalog-extra">
 				<p>С 10 до 20, ежедневно</p>
 				<b>8 812 450-25-25</b>
 			</div>
 		</header>
 <!-- main -->		
 		<main class="clearfix center">
-			<section class="breadcrumbs">
-				<a class="crumb" href="index.html">Главная</a>
-				<a class="crumb" href="#">Каталог</a>
-				<span class="crumb open">Сливочное</span>
-			</section>
-			<h1>Сливочное мороженое</h1>
+			<div class="linner-page-title">
+				<ul class="breadcrumbs">
+					<li><a class="crumb" href="index.html">Главная</a></li>
+					<li><a class="crumb" href="#">Каталог</a></li>
+					<li><span class="crumb open">Сливочное</span></li>
+				</ul>
+				<h1>Сливочное мороженое</h1>
+			</div>
 			<section class="filters">
 				<form class="filters-form" action="#" method="post">
 					<div class="filter filter-sort">
@@ -196,7 +202,7 @@
 						<span class="item-price">325 &#8381;</span>
 						<span class="item-weight">/кг</span>
 					</div>
-					<a href="#">Сливочное с брусничным джемом</a>
+					<a class="short-contaner" href="#">Сливочное с брусничным джемом</a>
 					<button class="btn pop-up" type="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods-item">
@@ -240,7 +246,7 @@
 						<span class="item-price">440 &#8381;</span>
 						<span class="item-weight">/кг</span>
 					</div>
-					<a href="#">Сливочно-ванильное с кусочками шоколада</a>
+					<a class="short-contaner" href="#">Сливочно-ванильное с кусочками шоколада</a>
 					<button class="btn pop-up" type="button">Быстрый просмотр</button>
 				</article>
 				<article class="goods-item">
@@ -278,31 +284,31 @@
 				</article>
 			</section>
 			<div class="paginator">
-			  <span class="prev">Назад</span>
-				<span class="page active">1</span>
-				<a class="page" href="#">2</a>
-				<a class="page" href="#">3</a>
-				<a class="page" href="#">4</a>
-				<a class="page" href="#">5</a>
-				<a class="next" href="#">Вперед</a>
+				<ul>
+				  <li><span class="prev">Назад</span></li>
+					<li><span class="page active">1</span></li>
+					<li><a class="page" href="#">2</a></li>
+					<li><a class="page" href="#">3</a></li>
+					<li><a class="page" href="#">4</a></li>
+					<li><a class="page" href="#">5</a></li>
+					<li><a class="next" href="#">Вперед</a></li>
+				</ul>
 			</div>
 		</main>
 <!-- footer -->
 		<footer class="main-footer clearfix center">
 			<div class="footer-line"></div>
-				<section class="footer-social">
-					<a class="social-btn catalog-social-btn social-btn-tv" href="#">Твиттер</a>
-					<a class="social-btn catalog-social-btn social-btn-inst" href="#">Инстаграм</a>
-					<a class="social-btn catalog-social-btn social-btn-fb" href="#">Фейсбук</a>
-					<a class="social-btn catalog-social-btn social-btn-vk" href="#">Вконтакте</a>
+				<section class="footer-social catalog-footer-social">
+					<a class="social-btn social-btn-tv" href="#">Твиттер</a>
+					<a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+					<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+					<a class="social-btn social-btn-vk" href="#">Вконтакте</a>
 				</section>
-				<section class="footer-information">
-					<div class="footer-information-wrapper catalog-footer-information-wrapper">
+				<section class="footer-information catalog-footer-information">
 						<a class="providers" href="#">Для поставщиков</a>
 						<a href="#">Наши документы</a>
 						<a href="#">О производстве</a>
 						<a href="#">Экологические стандарты</a>
-					</div>
 				</section>
 				<section class="footer-copyright">
 					<img class="logo-htmlacademy" src="img/footer/logo-htmlacademy.svg" width="108" height="37" alt="HTML Academy">
