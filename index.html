@@ -5,7 +5,7 @@
 		<title>HTML Academy: Глейси</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic" rel="stylesheet">
 		<link href="css/normalize.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
+		<link href="css/style_min.css" rel="stylesheet">
 	</head>
 	<body class="background">
 	<input name="slide" id="slide1" type="radio" checked>
@@ -13,7 +13,7 @@
 	<input name="slide" id="slide3" type="radio">
 	<div class="site-wrapper">
 <!-- header -->
-			<header class="main-header clearfix">
+			<header class="main-header clearfix" id="main-header">
 				<div class="logo">
 					<img src="img/header/logo.svg" width="154" height="64" alt="Gllacy shop">
 				</div>
@@ -21,13 +21,15 @@
 					<ul class="main-menu">
 						<li class="first-menu-level catalog">
 							<a href="#">Каталог</a>
-								<ul class="second-menu pop-up pop-up-style">
+							<div class="container-menu pop-up">
+								<ul class="second-menu pop-up-style">
 									<li class="new"><a href="#">Новинки</a></li>
 									<li><a href="catalog.html">Сливочное</a></li>
 									<li><a href="#">Щербеты</a></li>
 									<li><a href="#">Фруктовый лед</a></li>
 									<li><a href="#">Мелорин</a></li>
 								</ul>
+							</div>
 						</li>
 						<li class="first-menu-level">
 							<a href="#">Доставка и оплата</a>
@@ -39,23 +41,26 @@
 				</nav>
 				<div class="wrapper-search-user">
 					<div class="loupe">
-						<form class="search pop-up pop-up-style" action="#" method="get">
-							<input name="search" type="search" placeholder="Что ищем?">
-							<input class="pop-up" type="submit">
-						</form>
+						<div class="container-search pop-up">
+							<form class="search pop-up-style" action="#" method="get">
+								<input name="search" type="search" placeholder="Что ищем?">
+								<input class="pop-up" type="submit">
+							</form>
+						</div>
 					</div>
 					<div class="user-block">
 						<a class="login" href="#">Вход</a>
-						<form class="login-form pop-up pop-up-style" action="#" method="post">
-							<input name="email" type="email" placeholder="Электронная почта">
-							<input name="password" type="password" placeholder="Пароль">
-							<button class="btn" type="submit">Войти</button>
-							<div class="for-enter">
-								<a href="#">Забыли пароль?</a>
-								<a href="#">Новая регистрация</a>
-							</div>
-						</form>
+							<form class="login-form pop-up pop-up-style" action="#" method="post">
+								<input name="email" type="email" placeholder="Электронная почта">
+								<input name="password" type="password" placeholder="Пароль">
+								<button class="btn" type="submit">Войти</button>
+								<div class="for-enter">
+									<a href="#">Забыли пароль?</a>
+									<a href="#">Новая регистрация</a>
+								</div>
+							</form>
 						<a class="cart" href="#">Пусто</a>
+					</div>
 				</div>
 				<div class="extra">
 					<p>С 10 до 20, ежедневно</p>
@@ -173,7 +178,7 @@
 					</section>
 				</div>
 				<section class="location">
-				  <div class="map-image">
+				  <div class="map-image" id="yandex-map">
 				  	<img src="img/index/map/map-with-marker.png" width="1200" height="430" alt="Карта">
 				  </div>
 					<div class="contacts">
@@ -184,7 +189,7 @@
 						<p class="phone">Для заказов по телефону:<br>
 						<b>8 812 450-25-25</b><br>
 						(с 10 до 20 ежедневно)</p>
-						<a class="btn" href="#">Форма обратной связи</a>
+						<a class="feedback btn" href="catalog.html">Форма обратной связи</a>
 					</div>
 				</section>
 			</main>
@@ -222,5 +227,8 @@
 				</form>
 			</div>
 		</div>
+		<script class="yandex-map" type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=20TcXVWbDmLCW6tP_q483RoViXvAO98R&width=1200&height=430&lang=ru_RU&sourceType=constructor&id=yandex-map">
+		</script>
+		<script src="js/js_min.js"></script>
 	</body>
 </html>
