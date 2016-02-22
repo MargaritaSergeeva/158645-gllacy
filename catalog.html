@@ -5,7 +5,7 @@
 		<title>Глейси: Каталог</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic" rel="stylesheet">
 		<link href="css/normalize.css" rel="stylesheet">
-		<link href="css/style_min.css" rel="stylesheet">
+		<link href="css/style.min.css" rel="stylesheet">
 	</head>
 	<body>
 <!-- header -->
@@ -80,7 +80,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="extra catalog-extra">
+			<div class="extra">
 				<p>С 10 до 20, ежедневно</p>
 				<b>8 812 450-25-25</b>
 			</div>
@@ -116,23 +116,20 @@
 								<div class="range-toggle max-toggle"></div>
 							</div>
 					</div>
-					<div class="filter filter-fat">
-						<fieldset>
-							<legend>Жирность:</legend>
-								<div class="filter-decor">
-									<input class="fat" id="no-fat" name="fat" type="radio">
-									<label for="no-fat">0%</label>
-									<input class="fat" id="ten" name="fat" type="radio" checked>
-									<label for="ten">до 10%</label>
-									<input class="fat" id="thirty" name="fat" type="radio">
-									<label for="thirty">до 30%</label>
-									<input class="fat" id="thirty-more" name="fat" type="radio">
-									<label for="thirty-more">выше 30%</label>
-								</div>
-						</fieldset>
-					</div>
-					<div class="filter filter-fillers">
-						<fieldset>
+					<fieldset class="filter filter-fat">
+						<legend>Жирность:</legend>
+							<div class="filter-decor">
+								<input class="fat" id="no-fat" name="fat" type="radio">
+								<label for="no-fat">0%</label>
+								<input class="fat" id="ten" name="fat" type="radio" checked>
+								<label for="ten">до 10%</label>
+								<input class="fat" id="thirty" name="fat" type="radio">
+								<label for="thirty">до 30%</label>	
+								<input class="fat" id="thirty-more" name="fat" type="radio">
+								<label for="thirty-more">выше 30%</label>
+							</div>
+					</fieldset>
+						<fieldset class="filter filter-fillers">
 							<legend>Наполнители:</legend>
 								<div class="filter-decor">
 									<input id="chocolate" name="chocolate" type="checkbox" checked>
@@ -147,7 +144,6 @@
 									<label for="jams">джемы</label>
 								</div>
 						</fieldset>
-					</div>
 					<button class="btn" type="submit">Применить</button>
 				</form>
 			</section>
@@ -317,6 +313,6 @@
 					<span>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2016</span>
 				</section>
 		</footer>
-		<script src="js/js_min.js"></script>
+		<script src="js/script.min.js"></script>
 	</body>
 </html>

@@ -1,7 +1,7 @@
 /*div {outline: 1px solid #ff00ff}
 header, footer {outline: 1px solid white}
 nav, section, article {outline: 1px solid yellow}
-li, ul {outline: 1px solid red}
+li, ul, fieldset {outline: 1px solid red}
 form button, p{outline: 1px solid blue}
 a, span, img, input, b{outline: 1px solid brown}*/
 
@@ -413,12 +413,9 @@ textarea:focus:-ms-input-placeholder {
 .extra {
 	position: absolute;
 	top: 70px;
-	right: 0px;
-}
-
-.catalog-extra {
 	right: 27px;
 }
+
 
 .extra p {
 	margin: 0;
@@ -457,13 +454,14 @@ textarea:focus:-ms-input-placeholder {
 .footer-social {
 	float: left;
 	width: 267px;
-	min-height: 84px;
+	min-height: 63px;
 	margin-right: 26px;
 	padding-top: 38px;
 	font-size: 0;
 }
 
 .catalog-footer-social {
+	min-height: 74px;
 	margin-left: -2px;
 	padding-top: 22px;
 }
@@ -639,6 +637,10 @@ textarea:focus:-ms-input-placeholder {
 
 .goods-item:nth-child(n+5) {
 	margin-top: -7px;
+} 
+
+.goods-item:nth-child(n+9) {
+	margin-top: -5px;
 } 
 
 .item-image {
@@ -1195,7 +1197,7 @@ main>h1 {
 
 .filters-form {
 	min-height: 140px;
-	margin-bottom: 23px;
+	margin-bottom: 13px;
 }
 
 .filters-form fieldset {
@@ -1232,7 +1234,7 @@ main>h1 {
 
 .filter-sort select {
 	margin-top: 4px;
-	padding: 8px 10px;
+	padding: 8px 13px;
 	padding-left: 10px;
 	font-weight: 500;
 	background: rgba(248, 247, 244, 0.2);
@@ -1339,21 +1341,21 @@ main>h1 {
 
 .filter-fat {
 	width: 550px;
+	margin-top: 3px;
 	padding-top: 3px;
+	padding-left: 0;
+	padding-bottom: 0;
 }
 
 .filter-fat .filter-decor {
 	width: 415px;
-	padding-top: 6.5px;
-	padding-bottom: 7.5px;
+	padding-top: 6px;
+	padding-bottom: 7px;
 }
 
 .filter-fat legend {
 	margin-left: 15px;
-}
-
-.filter-fat fieldset {
-	padding-left: 0;
+	margin-bottom: 3px;
 }
 
 .filter-fat input[type="radio"] {
@@ -1418,15 +1420,15 @@ input[type="radio"]:disabled + label:hover::after {
 
 
 .filter-fillers {
-	width: 714px;
-	padding-top: 2.5px;
-}
+	width: 711px;
+	margin-top: 6px;
+	padding-left: 0;
+	padding-right: 0;
 
-.filter-fillers fieldset {
-	padding-left: 0px;
 }
 
 .filter-fillers .filter-decor {
+	width: 703px;
 	margin-left: -2px;
 }
 
@@ -1516,7 +1518,7 @@ input[type="checkbox"]:checked + label:nth-of-type(4):hover::after {
 }
 
 .filters-form .btn {
-	margin-top: 28px;
+	margin-top: 33px;
 	margin-left: -1px;
 	padding: 0 28px;
 	padding-top: 5px;
@@ -1532,7 +1534,7 @@ input[type="checkbox"]:checked + label:nth-of-type(4):hover::after {
 }
 
 .filters-form .btn:active {
-	margin-top: 26px;
+	margin-top: 31px;
 	margin-left: -3px;
 	padding: 0 30px;
 	padding-top: 7px;
@@ -1942,12 +1944,18 @@ input[type="checkbox"]:checked + label:nth-of-type(4):hover::after {
 }
 
 /*#####################################################################contact-form######################################################################*/
+@-webkit-keyframes uprise {
+	0% {transform: translateY(3000px);}
+	100% {transform: translate(0px);}
+}
+
 @keyframes uprise {
 	0% {transform: translateY(3000px);}
 	100% {transform: translate(0px);}
 }
 
 .animation-uprise {
+	-webkit-animation: uprise 1s;
 	animation: uprise 1s;
 }
 
