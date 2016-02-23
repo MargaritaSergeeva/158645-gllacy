@@ -1,9 +1,9 @@
-div {outline: 1px solid #ff00ff}
+/*div {outline: 1px solid #ff00ff}
 header, footer {outline: 1px solid white}
 nav, section, article {outline: 1px solid yellow}
 li, ul, fieldset {outline: 1px solid red}
 form button, p{outline: 1px solid blue}
-a, span, img, input, b{outline: 1px solid brown}
+a, span, img, input, b{outline: 1px solid brown}*/
 
 body {
 	position: relative;
@@ -245,7 +245,7 @@ textarea:focus:-ms-input-placeholder {
 	position: relative;
 	z-index: 1;
 	float: left;
-	width: 696px;
+	width: 500px;
 	min-height: 80px;
 	margin-right: 26px;
 }
@@ -295,8 +295,8 @@ textarea:focus:-ms-input-placeholder {
 .wrapper-search-user {
 	position: relative;
 	z-index: 1;
-	float: left;
-	width: 270px;
+	float: right;
+	max-width: 450px;
 	min-height: 80px;
 }
 
@@ -317,7 +317,6 @@ textarea:focus:-ms-input-placeholder {
 
 .user-block {
 	position: relative;
-	width: 228px;
 	margin-left: 42px;
 	padding-top: 22px;
 	padding-bottom: 20px;
@@ -736,9 +735,8 @@ textarea:focus:-ms-input-placeholder {
 .slider-image {
 	position: absolute;
 	top:-380px;
-	left: 50%;
+	left: 50px;
 	z-index: 0;
-	transform: translate(-50%);
 	width: 1046px;
 }
 
@@ -1074,7 +1072,7 @@ textarea:focus:-ms-input-placeholder {
 	padding-top: 10px;
 	padding-bottom: 12px;
 	font-size: 17px;
-	line-height: 24,3px;
+	line-height: 24.3px;
 }
  
 
@@ -1765,6 +1763,7 @@ input[type="checkbox"]:checked + label:nth-of-type(4):hover::after {
 
 .search input {
 	width: 288px;
+	height: 25px;
 	margin: 16px;
 	margin-right: 15px;
 	padding: 10px;
@@ -1772,7 +1771,7 @@ input[type="checkbox"]:checked + label:nth-of-type(4):hover::after {
 	padding-bottom: 7px;
 	padding-left: 11px;
 	font-size: 14px;
-	line-height: 24.3px;
+	line-height: 25px;
 }
 
 /*############################################################login####################################################################################*/
@@ -1952,22 +1951,22 @@ input[type="checkbox"]:checked + label:nth-of-type(4):hover::after {
 
 /*#####################################################################contact-form######################################################################*/
 @-webkit-keyframes uprise {
-	0% {transform: translateY(3000px);}
+	0% {transform: translateY(100px);}
 	100% {transform: translate(0px);}
 }
 
 @keyframes uprise {
-	0% {transform: translateY(3000px);}
+	0% {transform: translateY(100px);}
 	100% {transform: translate(0px);}
 }
 
 .animation-uprise {
-	-webkit-animation: uprise 1s;
-	animation: uprise 1s;
+	-webkit-animation: uprise 2s;
+	animation: uprise 2s;
 }
 
 .overlay-contact-form {
-	position: fixed;
+	position: relative;
 	top: 0;
 	left: 0;
 	z-index: 3;
@@ -1977,8 +1976,8 @@ input[type="checkbox"]:checked + label:nth-of-type(4):hover::after {
 }
 
 .contact-form {
-	position: absolute;
-	top: 338px;
+	position: fixed;
+	bottom: 100px;
 	left: 50%;
 	margin-left: -222px;
 	z-index: 3;

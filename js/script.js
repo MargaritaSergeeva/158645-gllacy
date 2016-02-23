@@ -93,10 +93,9 @@
 //Форма обратной связи
 	if (link) {
 		link.addEventListener("click", function(event) {
-			link.href="#main-header";//Перенос к началу страницы
+			event.preventDefault();
 			contactForm.classList.add("pop-up-show");//Появляется форма обратной связи при клике
 			form.classList.add("animation-uprise");//Анимация
-			name.focus();
 		});//
 		close.addEventListener("click", function(event) {
 			event.preventDefault();
