@@ -1,9 +1,9 @@
-/*div {outline: 1px solid #ff00ff}
+div {outline: 1px solid #ff00ff}
 header, footer {outline: 1px solid white}
 nav, section, article {outline: 1px solid yellow}
 li, ul, fieldset {outline: 1px solid red}
 form button, p{outline: 1px solid blue}
-a, span, img, input, b{outline: 1px solid brown}*/
+a, span, img, input, b{outline: 1px solid brown}
 
 body {
 	position: relative;
@@ -654,16 +654,23 @@ textarea:focus:-ms-input-placeholder {
 	position: absolute;
 	top: 208px;
 	left: 5px;
+	font-size: 0;
 	text-shadow: 2px 2px 3px rgba(49, 50, 53, 0.5);
 } 
 
 .item-price {
-	margin-right: -4px;
 	font-size: 45px;
 	line-height: 59px;
 	font-weight: bold;
 	letter-spacing: 0px;
 	word-spacing: -6px;
+}
+
+.ru-image {
+	display: inline-block;
+	margin-left: 4px;
+	margin-bottom: 9px;
+	vertical-align: bottom;
 }
 
 .item-weight {
@@ -1413,7 +1420,7 @@ input[type="radio"]:disabled + label::after {
 input[type="radio"]:disabled + label:hover::after {
 	top: 1px;
 	left: -29px;
-	box-shadow: 0 0 0 1px (255, 255, 255, 0.4);
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
 	border: 4px solid transparent;
 }
 
@@ -1581,7 +1588,7 @@ input[type="checkbox"]:checked + label:nth-of-type(4):hover::after {
 	font-size: 16px;
 	line-height: 22px;
 	text-align: center;
-	font-weight: 500px;
+	font-weight: 500;
 	vertical-align: top;
 	border-radius: 100%;
 
