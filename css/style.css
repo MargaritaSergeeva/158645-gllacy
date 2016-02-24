@@ -323,9 +323,14 @@ textarea:focus:-ms-input-placeholder {
 	font-size: 0;
 }
 
-.user-block > a {
-	position: relative;
+.user-block .container-login {
 	display: inline-block;
+	vertical-align: top;
+}
+
+.container-login .login {
+	position: relative;
+	display: block;
 	margin-left: 8px;
 	padding-top: 6px;
 	padding-bottom: 8px;
@@ -341,7 +346,8 @@ textarea:focus:-ms-input-placeholder {
 	border-radius: 45px;
 }
 
-.user-block .login::after {
+
+.container-login .login::after {
 	content: "";
 	position: absolute;
 	top: 7px;
@@ -352,23 +358,39 @@ textarea:focus:-ms-input-placeholder {
 
 }
 
-.user-block .login:hover {
+.container-login .login:hover {
 	color: #333333;
 	background: #f8f7f4;
 }
 
-.user-block .login:hover::after {
+.container-login .login:hover::after {
 	background: #f8f7f4 url("../img/header/black-enter.svg") no-repeat;
 }
 
-.user-block .cart {
-	position: relative;
-	z-index: 0;
-	margin-left: 10px;
-	padding-right: 34px;
+.user-block .container-cart {
+	display: inline-block;
+	vertical-align: top;
 }
 
-.user-block .cart::after {
+.container-cart .cart {
+	position: relative;
+	display: block;
+	margin-left: 10px;
+	padding-top: 6px;
+	padding-bottom: 8px;
+	padding-left: 44px;
+	padding-right: 34px;
+	vertical-align: top;
+	font-size: 14px;
+	line-height: 19px;
+	color: #ffffff; 
+	font-weight: 500;
+	text-decoration: none;
+	background: rgba(255, 255 ,255 ,0.2);
+	border-radius: 45px;
+}
+
+.container-cart .cart::after {
 	content: "";
 	position: absolute;
 	top: 7px;
@@ -378,28 +400,35 @@ textarea:focus:-ms-input-placeholder {
 	background: url("../img/header/cart.svg") no-repeat;
 }
 
-.user-block .cart:hover {
+.container-cart .cart:hover {
 	color: #333333; 
 	text-decoration: none;
 	background: #f8f7f4;
 }
 
-.user-block .cart:hover::after {
+.container-cart .cart:hover::after {
 	background: url("../img/header/black-cart.svg") no-repeat;
 }
 
-.user-block .cart-full {
+.container-cart .cart-full {
+	position: relative;
+	display: block;
 	margin-left: 9px;
 	padding-right: 17px;
 	padding-top: 6px;
 	padding-bottom: 8px;
 	padding-left: 44px;
-	color: #333333; 
+	font-size: 14px;
+	line-height: 19px;
+	color: #333333;
+	font-weight: 500; 
+	vertical-align: top;
 	text-decoration: none;
 	background: #f8f7f4;
+	border-radius: 45px;
 }
 
-.user-block .cart-full::after {
+.container-cart .cart-full::after {
 	content: "";
 	position: absolute;
 	top: 7px;
@@ -1671,9 +1700,9 @@ input[type="checkbox"]:checked + label:nth-of-type(4):hover::after {
 
 .catalog .container-menu {
 	position: absolute;
-	top: 28px;
+	top: 18px;
 	left: -6px;
-	padding-top:10px;
+	padding-top: 20px;
 }
 
 .catalog:hover .container-menu {
@@ -1752,9 +1781,9 @@ input[type="checkbox"]:checked + label:nth-of-type(4):hover::after {
 /*#######################################################search############################################################################*/
 .loupe .container-search {
 	position: absolute;
-	top: 26px;
+	top: 16px;
 	right: 0;
-	padding-top: 10px;
+	padding-top: 20px;
 }
 
 .loupe:hover .container-search {
@@ -1776,21 +1805,25 @@ input[type="checkbox"]:checked + label:nth-of-type(4):hover::after {
 
 /*############################################################login####################################################################################*/
 
-.user-block .login-form {
+.container-login .container-login-form {
 	position: absolute;
-	top: 59px;
+	top: 39px;
 	right: 127px;
 	z-index: 3;
+	padding-top: 20px;
+}
+
+.container-login:hover .container-login-form {
+	display: block;
+}
+
+.container-login-form .login-form {
 	padding: 15px; 
 	padding-top: 20px;
 	padding-left: 17px;
 	padding-bottom: 13px;
 	font-size: 14px;
 	line-height: 24.3px;
-}
-
-.login:hover .login-form {
-	display: block;
 }
 
 .login-form input {
@@ -1827,11 +1860,19 @@ input[type="checkbox"]:checked + label:nth-of-type(4):hover::after {
 
 /*###########################################################in-cart#######################################################################################*/
 
-.user-block .in-cart {
+.container-cart .container-in-cart {
 	position: absolute;
-	top: 59px;
+	top: 39px;
 	right: -1px;
 	z-index: 3;
+	padding-top: 20px;
+}
+
+.container-cart:hover .container-in-cart {
+	display: block;
+}
+
+.container-in-cart .in-cart {
 	width: 524px;
 	padding-left: 16px;
 	padding-top: 26px;

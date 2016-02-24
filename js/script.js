@@ -1,19 +1,14 @@
 
-	var loupe = document.querySelector(".loupe");
 	var search = document.querySelector(".container-search");
 	var inputSearch = search.querySelector(".search input");
-
-	var catalog = document.querySelector(".catalog");
-	var secondMenu = document.querySelector(".container-menu");
 
 	var login = document.querySelector(".login");
 	var loginForm = document.querySelector(".login-form");
 	var loginEmail = loginForm.querySelector("[name=email]");
 	var password = loginForm.querySelector("[name=password]");
-	var storageLoginEmail = localStorage.getItem("loginEmail");
-
-	var cartFull = document.querySelector(".cart-full");
-	var inCart = document.querySelector(".in-cart");
+	if (window.localStorage) {
+		var storageLoginEmail = localStorage.getItem("loginEmail");
+	}
 
 	var link = document.querySelector(".feedback");
 	var contactForm = document.querySelector(".overlay-contact-form");
@@ -35,60 +30,28 @@
 	var imgMap = document.querySelector("img[alt=Карта]");
 
 //Поиск
-	if (loupe) {
-		loupe.addEventListener("mouseover", function() {
-			search.classList.add("pop-up-show");
+	if (search) {
+		search.addEventListener("mouseover", function() {
 			inputSearch.focus();
-		});//Появляется всплывающее окно поиска при наведении курсора
-		search.addEventListener("mouseout", function() {
-			search.classList.remove("pop-up-show");
-		})};//Исчезает всплывающее окно поиска при убирании курсора
-
-//Каталог
-	if(catalog) {
-		catalog.addEventListener("mouseover", function() {
-			secondMenu.classList.add("pop-up-show");
-		});//Появляется вложенное меню каталога при наведении курсора
-		secondMenu.addEventListener("mouseout", function() {
-			secondMenu.classList.remove("pop-up-show");
-		})};//Исчезает вложенное меню каталога при убирании курсора
+		})};
 
 //Вход
 	if(login) {
-		login.addEventListener("mouseover", function() {
-			loginForm.classList.add("pop-up-show");
-		});
 		loginForm.addEventListener("mouseover", function() {
-		loginForm.classList.add("pop-up-show");//Появляется форма входа при наведении курсора
 			if (storageLoginEmail) {
-				loginEmail.value = storageLoginEmail;
+				loginEmail.value = storageLoginEmail;//вставляет значение поля "Логин"
 				password.focus();
 			} else {
-			loginEmail.focus();
+				loginEmail.focus();
 			}
-		});//Сохраняется Логин
-		loginForm.addEventListener("mouseout", function() {
-			loginForm.classList.remove("pop-up-show");
-		});//Исчезает форма входа при убирании курсора
+		});
 		loginForm.addEventListener("submit", function(event) {
 			if(!loginEmail.value || !password.value) {
-				event.preventDefault();
+				event.preventDefault();//не отправляется форма при незаполненных полях
 			} else {
-				localStorage.setItem("loginEmail",loginEmail.value);
-			}//не отправляется форма при незаполненных полях
+				localStorage.setItem("loginEmail",loginEmail.value);//сохраняет значение поля "Логин"
+			}
 		})};
-
-//Корзина полная
-	if (cartFull) {
-		cartFull.addEventListener("mouseover", function() {
-			inCart.classList.add("pop-up-show");
-		});
-		inCart.addEventListener("mouseover", function() {
-			inCart.classList.add("pop-up-show");
-		});//Появляется содержимое корзины при наведении курсора
-		inCart.addEventListener("mouseout", function() {
-			inCart.classList.remove("pop-up-show");
-		})};//Исчезает содержимое корзины при убирании курсора
 
 //Форма обратной связи
 	if (link) {
@@ -100,7 +63,7 @@
 		close.addEventListener("click", function(event) {
 			event.preventDefault();
 			contactForm.classList.remove("pop-up-show");//Исчезает форма обратной связи при клике
-			form.classList.remove("animation-uprise");
+			form.classList.remove("animation-uprise");//удаляет класс с анимацией
 		});
 		form.addEventListener("submit", function(event) {
 			if(!name.value || !email.value || !text.value) {
